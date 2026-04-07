@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAARIGARS — Wear Your Vibe</title>
+  <meta name="description"
+    content="KAARIGARS creates bold fashion for everyday style. Discover our new arrivals and popular styles in luxury editorial fashion." />
+  <meta property="og:title" content="KAARIGARS — Wear Your Vibe" />
+  <meta property="og:description" content="Bold fashion for confident everyday style." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'warm-white': '#FAFAF8',
+            'warm-beige': '#F5F0E8',
+            'warm-brown': '#8B6914',
+            'deep-brown': '#4A3520',
+            'sky-blue': '#87CEEB',
+            'soft-blue': '#B8D4E8',
+          },
+          backdropBlur: {
+            xs: '2px',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-black overflow-x-hidden font-sans">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 navbar-glass">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+
+      <!-- LEFT NAV LINKS -->
+      <ul class="hidden lg:flex items-center gap-8 text-white text-sm tracking-widest font-light">
+        <li><a href="#" id="nav-home" class="nav-link hover:opacity-70 transition-all duration-200">Home</a></li>
+
+        <!-- Shop Dropdown -->
+        <li class="relative group" id="dropdown-shop">
+          <button class="nav-link flex items-center gap-1 hover:opacity-70 transition-all duration-200">
+            Shop
+            <i data-feather="chevron-down" class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="dropdown-menu absolute top-full left-0 mt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+            <div class="glass-card rounded-2xl py-2 px-1">
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">New
+                Arrivals</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Best
+                Sellers</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Collections</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Lookbook</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Women Dropdown -->
+        <li class="relative group" id="dropdown-women">
+          <button class="nav-link flex items-center gap-1 hover:opacity-70 transition-all duration-200">
+            Women
+            <i data-feather="chevron-down" class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="dropdown-menu absolute top-full left-0 mt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+            <div class="glass-card rounded-2xl py-2 px-1">
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Dresses</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Tops</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Outerwear</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Accessories</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Men Dropdown -->
+        <li class="relative group" id="dropdown-men">
+          <button class="nav-link flex items-center gap-1 hover:opacity-70 transition-all duration-200">
+            Men
+            <i data-feather="chevron-down" class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="dropdown-menu absolute top-full left-0 mt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+            <div class="glass-card rounded-2xl py-2 px-1">
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Jackets</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Shirts</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Trousers</a>
+              <a href="#"
+                class="dropdown-item block px-4 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-xl transition-all">Footwear</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Sale Badge -->
+        <li>
+          <a href="#" id="nav-sale" class="flex items-center gap-2 hover:opacity-80 transition-all duration-200">
+            <span
+              class="sale-badge px-3 py-1 rounded-full text-xs font-semibold tracking-widest text-white bg-rose-500">SALE</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- CENTER LOGO -->
+      <a href="#" id="nav-logo"
+        class="absolute left-1/2 -translate-x-1/2 font-serif text-2xl md:text-3xl tracking-[0.3em] text-white font-light hover:opacity-80 transition-opacity duration-300">
+        KAARIGARS
+      </a>
+
+      <!-- RIGHT ICONS -->
+      <div class="hidden lg:flex items-center gap-5 text-white">
+        <button id="btn-search" aria-label="Search"
+          class="nav-icon-btn hover:opacity-60 transition-all duration-200 hover:scale-110">
+          <i data-feather="search" class="w-5 h-5"></i>
+        </button>
+        <button id="btn-profile" aria-label="Profile"
+          class="nav-icon-btn hover:opacity-60 transition-all duration-200 hover:scale-110">
+          <i data-feather="user" class="w-5 h-5"></i>
+        </button>
+        <button id="btn-wishlist" aria-label="Wishlist"
+          class="nav-icon-btn hover:opacity-60 transition-all duration-200 hover:scale-110">
+          <i data-feather="heart" class="w-5 h-5"></i>
+        </button>
+        <button id="btn-cart" aria-label="Cart"
+          class="nav-icon-btn relative hover:opacity-60 transition-all duration-200 hover:scale-110">
+          <i data-feather="shopping-bag" class="w-5 h-5"></i>
+          <span
+            class="absolute -top-1.5 -right-1.5 w-4 h-4 bg-white text-black text-[10px] font-bold rounded-full flex items-center justify-center leading-none">3</span>
+        </button>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="mobile-menu-btn" aria-label="Toggle menu"
+        class="lg:hidden text-white ml-auto hover:opacity-70 transition-opacity">
+        <i data-feather="menu" class="w-6 h-6" id="menu-icon"></i>
+        <i data-feather="x" class="w-6 h-6 hidden" id="close-icon"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="lg:hidden hidden mobile-menu-glass border-t border-white/10">
+      <div class="px-6 py-6 space-y-1">
+        <a href="#" class="block py-3 text-white text-base tracking-widest font-light border-b border-white/10">Home</a>
+        <a href="#" class="block py-3 text-white text-base tracking-widest font-light border-b border-white/10">Shop</a>
+        <a href="#"
+          class="block py-3 text-white text-base tracking-widest font-light border-b border-white/10">Women</a>
+        <a href="#" class="block py-3 text-white text-base tracking-widest font-light border-b border-white/10">Men</a>
+        <a href="#" class="block py-3 text-rose-400 text-base tracking-widest font-medium">Sale</a>
+        <div class="flex gap-6 pt-4">
+          <button aria-label="Search" class="text-white hover:opacity-70"><i data-feather="search"
+              class="w-5 h-5"></i></button>
+          <button aria-label="Profile" class="text-white hover:opacity-70"><i data-feather="user"
+              class="w-5 h-5"></i></button>
+          <button aria-label="Wishlist" class="text-white hover:opacity-70"><i data-feather="heart"
+              class="w-5 h-5"></i></button>
+          <button aria-label="Cart" class="text-white hover:opacity-70 relative">
+            <i data-feather="shopping-bag" class="w-5 h-5"></i>
+            <span
+              class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-white text-black text-[9px] font-bold rounded-full flex items-center justify-center">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+
+    <!-- HERO BACKGROUND IMAGE -->
+    <div class="absolute inset-0 hero-bg" id="hero-parallax">
+      <img src="hero.png" alt="KAARIGARS fashion model in brown suede jacket"
+        class="w-full h-full object-cover object-center" id="hero-img"
+        onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='block';" />
+      <!-- Fallback gradient if image not loaded -->
+      <div id="hero-fallback" class="absolute inset-0 hidden"
+        style="background: linear-gradient(135deg, #87CEEB 0%, #B8D4E8 30%, #8B6914 60%, #6B4F2A 100%);"></div>
+    </div>
+
+    <!-- GRADIENT OVERLAY -->
+    <div class="absolute inset-0 hero-gradient-overlay"></div>
+
+    <!-- HERO CONTENT — LEFT -->
+    <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+      <div class="max-w-2xl hero-content" id="hero-text">
+
+        <!-- Pre-heading -->
+        <p class="text-white/60 text-xs tracking-[0.4em] uppercase font-light mb-5 fade-up"
+          style="animation-delay: 0.1s">
+          SPRING 2026 Collection
+        </p>
+
+        <!-- Main Heading -->
+        <h1 class="font-serif text-white leading-[1.05] mb-6 fade-up"
+          style="font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 300; animation-delay: 0.25s">
+          Wear Your<br />
+          <em class="not-italic font-light" style="font-style: italic; letter-spacing: -0.01em;">Vibe</em>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="text-white/75 text-base md:text-lg font-light leading-relaxed mb-10 max-w-md fade-up"
+          style="animation-delay: 0.4s">
+          KAARIGARS creates bold fashion for everyday style
+        </p>
+
+        <!-- CTA Button -->
+        <div class="flex flex-wrap items-center gap-4 fade-up" style="animation-delay: 0.55s">
+          <a href="#" id="cta-shop-now"
+            class="cta-primary group inline-flex items-center gap-3 px-8 py-3.5 border border-white text-white text-sm tracking-widest font-light rounded-full hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            Shop Now
+            <i data-feather="arrow-right"
+              class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+          <a href="#" id="cta-explore"
+            class="text-white/60 text-sm tracking-widest font-light hover:text-white transition-all duration-300 underline underline-offset-4">
+            Explore Collection
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FLOATING BOTTOM CARDS ===== -->
+    <div class="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-20 flex flex-row gap-3 floating-cards"
+      id="bottom-cards">
+
+      <!-- Card 1: New Arrivals -->
+      <div
+        class="float-card group glass-card-card rounded-2xl p-3 flex items-center gap-3 w-44 md:w-52 hover:scale-105 transition-all duration-300 cursor-pointer fade-up"
+        style="animation-delay: 0.7s" id="card-new-arrivals">
+        <div class="w-12 h-14 md:w-14 md:h-16 rounded-xl overflow-hidden flex-shrink-0 bg-stone-300">
+          <img src="boy.png" alt="New Arrivals thumbnail"
+            class="float-thumb w-full h-full object-cover transition-transform duration-500 ease-out"
+            data-preview="boy.png"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#c9a87c,#8B6914)';" />
+        </div>
+        <div>
+          <p class="float-label text-white text-xs tracking-[0.2em] font-medium mb-1 transition-all duration-300 ease-out">New Arrivals</p>
+          <a href="#"
+            class="text-white/60 text-[11px] tracking-widest flex items-center gap-1 hover:text-white transition-colors">
+            Shop now <i data-feather="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Popular Styles -->
+      <div
+        class="float-card group glass-card-card rounded-2xl p-3 flex items-center gap-3 w-44 md:w-52 hover:scale-105 transition-all duration-300 cursor-pointer fade-up"
+        style="animation-delay: 0.85s" id="card-popular-styles">
+        <div class="w-12 h-14 md:w-14 md:h-16 rounded-xl overflow-hidden flex-shrink-0 bg-stone-300">
+          <img src="girl.png" alt="Popular Styles thumbnail"
+            class="float-thumb w-full h-full object-cover transition-transform duration-500 ease-out"
+            data-preview="girl.png"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#8B6914,#4A3520)';" />
+        </div>
+        <div>
+          <p class="float-label text-white text-xs tracking-[0.2em] font-medium mb-1 transition-all duration-300 ease-out">Popular Styles</p>
+          <a href="#"
+            class="text-white/60 text-[11px] tracking-widest flex items-center gap-1 hover:text-white transition-colors">
+            Shop now <i data-feather="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FLOATING AI STYLIST BUTTON — RIGHT ===== -->
+    <div class="absolute right-6 md:right-10 bottom-8 md:bottom-12 z-20 fade-up" style="animation-delay: 1s"
+      id="ai-stylist-wrapper">
+      <button id="btn-ai-stylist"
+        class="ai-stylist-btn group flex items-center gap-3 px-5 py-3.5 rounded-full bg-white text-black text-sm font-medium tracking-wide shadow-2xl hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:scale-105 transition-all duration-300">
+        Try AI Stylist
+        <span
+          class="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-300">
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- SCROLL INDICATOR -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 fade-up"
+      style="animation-delay: 1.2s">
+      <div class="scroll-line w-px h-10 bg-white/30 relative overflow-hidden">
+        <div class="scroll-dot absolute top-0 left-0 w-full bg-white/80 h-1/2 animate-scroll-down"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BELOW FOLD TEASER (Optional Extra Section) ===== -->
+  <section id="features" class="relative bg-[#0a0a0a] py-24 md:py-32 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-white/40 text-xs tracking-[0.5em] uppercase font-light mb-4">Our Philosophy</p>
+        <h2 class="font-serif text-white text-4xl md:text-6xl font-light leading-tight">Crafted for the <em
+            class="not-italic italic">Style</em></h2>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div
+          class="feature-card group text-center p-8 rounded-3xl border border-white/5 hover:border-white/15 transition-all duration-500 hover:bg-white/5">
+          <div
+            class="w-12 h-12 mx-auto mb-6 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-feather="star" class="w-5 h-5 text-amber-300"></i>
+          </div>
+          <h3 class="font-serif text-white text-xl font-light mb-3">Premium Quality</h3>
+          <p class="text-white/40 text-sm leading-relaxed font-light">Crafted to Last, Styled to Flex.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div
+          class="feature-card group text-center p-8 rounded-3xl border border-white/5 hover:border-white/15 transition-all duration-500 hover:bg-white/5">
+          <div
+            class="w-12 h-12 mx-auto mb-6 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-feather="refresh-cw" class="w-5 h-5 text-sky-300"></i>
+          </div>
+          <h3 class="font-serif text-white text-xl font-light mb-3">Sustainable Fashion</h3>
+          <p class="text-white/40 text-sm leading-relaxed font-light">Better for You. Better for Earth.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div
+          class="feature-card group text-center p-8 rounded-3xl border border-white/5 hover:border-white/15 transition-all duration-500 hover:bg-white/5">
+          <div
+            class="w-12 h-12 mx-auto mb-6 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-feather="zap" class="w-5 h-5 text-rose-300"></i>
+          </div>
+          <h3 class="font-serif text-white text-xl font-light mb-3">AI Styling</h3>
+          <p class="text-white/40 text-sm leading-relaxed font-light">Your Fit, Upgraded by AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI STYLIST MODAL -->
+  <div id="ai-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modal-overlay"></div>
+    <div class="relative glass-modal rounded-3xl p-8 max-w-md w-full text-center fade-up">
+      <button id="modal-close" class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors">
+        <i data-feather="x" class="w-5 h-5"></i>
+      </button>
+      <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/10 flex items-center justify-center">
+        <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
+        </svg>
+      </div>
+      <h2 class="font-serif text-white text-2xl font-light mb-2">AI Stylist</h2>
+      <p class="text-white/50 text-sm leading-relaxed mb-6">Our AI will suggest the perfect look based on your body
+        type,
+        preferences, and occasion.</p>
+      <button
+        class="w-full py-3.5 rounded-full bg-white text-black text-sm font-medium tracking-wide hover:bg-white/90 transition-all hover:scale-105">
+        Start Styling Session
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

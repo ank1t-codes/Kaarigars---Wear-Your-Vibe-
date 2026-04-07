@@ -1,0 +1,13 @@
+{
+  "name": "valore-fashion",
+  "version": "1.0.0",
+  "description": "VALORÉ — Luxury Fashion Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
